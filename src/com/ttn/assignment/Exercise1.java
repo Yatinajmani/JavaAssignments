@@ -1,6 +1,6 @@
 package com.ttn.assignment;
 
-public class Exerciser1 {
+public class Exercise1 {
 
     public static void main(String[] args) {
         String str = "string";
