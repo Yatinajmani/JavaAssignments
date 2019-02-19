@@ -1,4 +1,4 @@
-package com.ttn.assignment.Exercise7;
+package com.ttn.assignment.exercise7;
 
 public class Exercise7 {
     public static void main(String[] args) {
