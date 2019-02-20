@@ -12,10 +12,10 @@ public class Exercise4 {
     }
 
     private static void calculateCharacters(String str) {
-        int lowercaseCharacters = 0;
-        int uppercaseCharacters = 0;
-        int digits = 0;
-        int otherCharacters = 0;
+        float lowercaseCharacters = 0;
+        float uppercaseCharacters = 0;
+        float digits = 0;
+        float otherCharacters = 0;
         for (char ch : str.toCharArray()) {
             if (ch >= 65 && ch <= 90)
                 uppercaseCharacters++;
@@ -26,9 +26,9 @@ public class Exercise4 {
             else
                 otherCharacters++;
         }
-        System.out.println("No. of lowercase characters : " + lowercaseCharacters);
-        System.out.println("No. of uppercase characters : " + uppercaseCharacters);
-        System.out.println("No. of digits : " + digits);
-        System.out.println("No. of otherCharacters : " + otherCharacters);
+        System.out.println("No. of lowercase characters : " + lowercaseCharacters + " And % is " +lowercaseCharacters*100/str.length());
+        System.out.println("No. of uppercase characters : " + uppercaseCharacters + " And % is " +uppercaseCharacters*100/str.length());
+        System.out.println("No. of digits : " + digits + " And % is " + digits*100/str.length());
+        System.out.println("No. of otherCharacters : " + otherCharacters + " And % is " +otherCharacters*100/str.length());
     }
 }
