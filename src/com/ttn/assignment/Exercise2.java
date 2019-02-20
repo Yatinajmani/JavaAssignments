@@ -1,16 +1,28 @@
 package com.ttn.assignment;
 
+import java.util.Scanner;
+
+/**
+ * Write a program to find the number of occurrences of the duplicate words in a string and print them ?
+ * This question could have been solved using Java Collection Framework.
+ */
 public class Exercise2 {
     public static void main(String[] args) {
-        String str = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been " +
-                "the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type " +
-                "and scrambled it to make a type specimen book. It has survived not only five centuries, but also" +
-                " the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the" +
-                " 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with" +
-                " desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+        System.out.print("Enter a String : ");
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        System.out.println("Original String = " + str);
         findOccurences(str);
     }
 
+    /**
+     * This method takes a string argument and splits the string around " " and iterate over each element and check
+     * whether it is repeated by comparing the element with each word in provided string. Then it replace every
+     * repeated element from the string with empty string and If the occurences of element is greater than 0 it print
+     * that element with it's occurences.
+     *
+     * @param str
+     */
     public static void findOccurences(String str) {
         for (String str1 : str.split(" ")) {
             int count = 0;

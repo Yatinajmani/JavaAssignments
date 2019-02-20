@@ -1,5 +1,9 @@
 package com.ttn.assignment.exercise9;
 
+/**
+ * Write a program to display values of enums using a constructor & getPrice() method
+ * (Example display house & their prices)
+ */
 public class Exercise9 {
     public static void main(String[] args) {
         House house = House.VILLA;

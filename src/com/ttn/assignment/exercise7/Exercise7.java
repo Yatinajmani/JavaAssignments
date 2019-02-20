@@ -1,11 +1,13 @@
 package com.ttn.assignment.exercise7;
 
+/**
+ * Write a program to print your Firstname,LastName & age using static block,static method & static variable
+ * respectively
+ */
 public class Exercise7 {
     public static void main(String[] args) {
-        Trainee.firstName = "Yatin";
-        Trainee.lastName = "Ajmani";
-        Trainee.age = 24;
-        System.out.println("FirstName : " + Trainee.firstName + ", LastName : " + Trainee.lastName + ", Age: " + Trainee.age);
-        System.out.println("FirstName : " + Trainee.getFirstName() + ", LastName : " + Trainee.getLastName() + ", Age: " + Trainee.getAge());
+
+        System.out.print("FirstName : ");
+        System.out.print("LastName : " + Trainee.getLastName() + ", Age: " + Trainee.age);
     }
 }

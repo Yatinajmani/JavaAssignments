@@ -1,5 +1,9 @@
 package com.ttn.assignment;
 
+/**
+ * Find common elements between two arrays.
+ *
+ */
 public class Exercise5 {
     public static void main(String[] args) {
         int[] arr1 = {11, 2, 3, 4, 55, 1, 2, 1, 5};
@@ -18,23 +22,10 @@ public class Exercise5 {
         }
     }
 
-    private static int removeDuplicates(int[] arr1) {
-        int j = 0;
-        int temp[] = new int[arr1.length];
-        for (int i = 0; i < arr1.length - 1; i++) {
-            if (arr1[i] != arr1[i + 1]) {
-                temp[j] = arr1[i];
-                j++;
-            }
-        }
-        temp[j] = arr1[arr1.length - 1];
-        j++;
-        for (int i = 0; i < j; i++) {
-            arr1[i] = temp[i];
-        }
-        return j;
-    }
-
+    /**
+     * This method is used for sorting the array
+     * @param arr1
+     */
     public static void sort(int[] arr1) {
         for (int i = 0; i < arr1.length; i++) {
             int temp;
@@ -46,5 +37,30 @@ public class Exercise5 {
                 }
             }
         }
+    }
+
+    /**
+     * This method takes a sorted array as input and is used to remove duplicate element if exist in the array,
+     * this creates a new array with checking whether the element next to it is same or not therefore we check this
+     * till second last element and append array with last element.
+     *
+     * @param sortedArray
+     * @return new length of the array having no duplicates
+     */
+    private static int removeDuplicates(int[] sortedArray) {
+        int j = 0;
+        int temp[] = new int[sortedArray.length];
+        for (int i = 0; i < sortedArray.length - 1; i++) {
+            if (sortedArray[i] != sortedArray[i + 1]) {
+                temp[j] = sortedArray[i];
+                j++;
+            }
+        }
+        temp[j] = sortedArray[sortedArray.length - 1];
+        j++;
+        for (int i = 0; i < j; i++) {
+            sortedArray[i] = temp[i];
+        }
+        return j;
     }
 }
